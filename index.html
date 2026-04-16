@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Unspoken | 电影不言</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif; /* 更有 MRE 学术沉淀感 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 顶部导航：模仿 Bytowne 的细腻感 */
+        header {
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 15, 15, 0.95);
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            letter-spacing: 6px;
+            color: #c5a059; /* 柔和的金属金 */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* 主体海报：电影质感的灵魂 */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            background: linear-gradient(to bottom, rgba(15,15,15,0.7), #0f0f0f),
+                        url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: clamp(50px, 12vw, 100px);
+            line-height: 0.9;
+            margin-bottom: 25px;
+            font-weight: normal;
+            letter-spacing: -2px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #888;
+            max-width: 550px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-family: sans-serif; /* 描述文字用无衬线体更好读 */
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 45px;
+            border: 1px solid #c5a059;
+            color: #c5a059;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            transition: 0.5s;
+        }
+
+        .cta-btn:hover {
+            background-color: #c5a059;
+            color: #0f0f0f;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FILM UNSPOKEN</div>
+        <div style="font-size: 12px; color: #555; letter-spacing: 2px;">EST. 2026 / MRE PROJECT</div>
+    </header>
+
+    <div class="hero">
+        <h1>NOW<br>SHOWING</h1>
+        <p class="description">
+            在光影沉寂处，探讨定居殖民、离散身份与身体的张力。<br>
+            作为健身教练与学者，我在这里通过影像重新定义“存在”。
+        </p>
+        <a href="#" class="cta-btn">进入放映厅</a>
+    </div>
+
+</body>
+</html>
