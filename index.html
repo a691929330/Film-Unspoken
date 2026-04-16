@@ -3,104 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Unspoken | 电影不言</title>
+    <title>Unfinished Imaginations | 未竟的想象</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background-color: #0f0f0f;
-            color: #ffffff;
-            font-family: 'Times New Roman', Times, serif; /* 更有 MRE 学术沉淀感 */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #080808; /* 极深背景，增加沉浸感 */
+            color: #c0c0c0;
+            font-family: 'Palatino', 'Georgia', serif;
+            line-height: 1.8;
         }
 
-        /* 顶部导航：模仿 Bytowne 的细腻感 */
         header {
-            padding: 30px 8%;
+            padding: 35px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(15, 15, 15, 0.95);
-            border-bottom: 1px solid #2a2a2a;
+            border-bottom: 1px solid #1a1a1a;
             position: sticky;
             top: 0;
+            background: rgba(8, 8, 8, 0.95);
+            backdrop-filter: blur(8px);
             z-index: 100;
         }
 
-        .logo {
-            font-size: 22px;
-            letter-spacing: 6px;
-            color: #c5a059; /* 柔和的金属金 */
+        .logo { 
+            color: #c5a059; 
+            font-size: 20px; 
+            letter-spacing: 4px; 
             font-weight: bold;
             text-transform: uppercase;
         }
 
-        /* 主体海报：电影质感的灵魂 */
-        .hero {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 10%;
-            background: linear-gradient(to bottom, rgba(15,15,15,0.7), #0f0f0f),
-                        url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=2000');
+        /* 策展声明区 */
+        .curatorial-hero {
+            padding: 120px 10% 80px 10%;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .section-label {
+            color: #c5a059;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        h1 { 
+            font-size: clamp(30px, 5vw, 56px); 
+            color: #fff; 
+            line-height: 1.1;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+
+        .statement-text {
+            max-width: 850px;
+            font-size: 19px;
+            color: #a0a0a0;
+            font-style: italic;
+        }
+
+        /* 影片展示区 */
+        .screening-container { padding: 80px 10%; }
+
+        .film-entry {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 左右排版，左图右文 */
+            gap: 60px;
+            margin-bottom: 120px;
+            align-items: start;
+        }
+
+        /* 移动端自动转为上下排版 */
+        @media (max-width: 900px) {
+            .film-entry { grid-template-columns: 1fr; }
+        }
+
+        .film-visual {
+            width: 100%;
+            height: 450px;
+            background-color: #111;
             background-size: cover;
             background-position: center;
+            border: 1px solid #222;
         }
 
-        h1 {
-            font-size: clamp(50px, 12vw, 100px);
-            line-height: 0.9;
-            margin-bottom: 25px;
+        .film-title { 
+            font-size: 32px; 
+            color: #fff; 
+            margin-bottom: 10px;
             font-weight: normal;
-            letter-spacing: -2px;
         }
 
-        .description {
-            font-size: 18px;
+        .film-director { 
+            color: #c5a059; 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .synopsis {
+            font-size: 16px;
             color: #888;
-            max-width: 550px;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-family: sans-serif; /* 描述文字用无衬线体更好读 */
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #1a1a1a;
         }
 
-        .cta-btn {
-            display: inline-block;
-            padding: 15px 45px;
-            border: 1px solid #c5a059;
-            color: #c5a059;
-            text-decoration: none;
-            text-transform: uppercase;
+        /* 批判性书写样式 (Critical Writing) */
+        .critical-writing {
+            font-size: 15px;
+            color: #b0b0b0;
+            background: #0d0d0d;
+            padding: 25px;
+            border-left: 1px solid #c5a059;
+            position: relative;
+        }
+
+        .critical-writing::before {
+            content: "CRITICAL INSIGHT";
+            display: block;
+            font-size: 10px;
             letter-spacing: 3px;
-            font-size: 13px;
-            transition: 0.5s;
+            color: #c5a059;
+            margin-bottom: 15px;
+            opacity: 0.8;
         }
 
-        .cta-btn:hover {
-            background-color: #c5a059;
-            color: #0f0f0f;
-            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+        footer {
+            padding: 80px 10%;
+            background: #050505;
+            color: #444;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">FILM UNSPOKEN</div>
-        <div style="font-size: 12px; color: #555; letter-spacing: 2px;">EST. 2026 / MRE PROJECT</div>
+        <div class="logo">Unfinished Imaginations</div>
+        <nav style="font-size: 11px; letter-spacing: 2px; color: #555;">FILM AS CRITICAL MEDIUM</nav>
     </header>
 
-    <div class="hero">
-        <h1>NOW<br>SHOWING</h1>
-        <p class="description">
-            在光影沉寂处，探讨定居殖民、离散身份与身体的张力。<br>
-            作为健身教练与学者，我在这里通过影像重新定义“存在”。
-        </p>
-        <a href="#" class="cta-btn">进入放映厅</a>
-    </div>
+    <section class="curatorial-hero">
+        <span class="section-label">Opening Statement</span>
+        <h1>未竟的想象：<br>加拿大身份政治策展网站</h1>
+        <div class="statement-text">
+            "We think of Canada as a place for settlement, but what if we see it as a political formation?"
+            本网站通过对特定影像的重组与解读，旨在为新移民提供一个超越“生存指南”的情感空间，通过批判性观影重新审视身份的归属与土地的主权。
+        </div>
+    </section>
+
+    <main class="screening-container">
+        
+        <div class="film-entry">
+            <div class="film-visual" style="background-image: url('https://images.unsplash.com/photo-1505672678657-cc7037095e60?q=80&w=1000');">
+                </div>
+            <div class="film-info">
+                <span class="film-director">Alanis Obomsawin (1993)</span>
+                <h2 class="film-title">Kanehsatake: 270 Years of Resistance</h2>
+                <div class="synopsis">
+                    这部纪录片详尽记录了 1990 年发生的奥卡冲突（Oka Crisis），展现了莫霍克（Mohawk）人民为保护祖传土地而进行的武装抵抗。
+                </div>
+                <div class="critical-writing">
+                    此片的意义在于它打破了加拿大官方的“和平调解者”神话。通过将镜头对准冲突最前线，Obomsawin 不仅记录了历史，更提出了一种对“主权”的视觉解读。对于新移民而言，这挑战了他们对加拿大法律框架的初步认知，强迫观众直面定居者社会（Settler Society）的基础暴力。
+                </div>
+            </div>
+        </div>
+
+        <div class="film-entry">
+            <div class="film-visual" style="background-image: url('https://images.unsplash.com/photo-1497015289639-54688650d173?q=80&w=1000');"></div>
+            <div class="film-info">
+                <span class="film-director">Matthew Rankin (2024)</span>
+                <h2 class="film-title">Universal Language</h2>
+                <div class="synopsis">
+                    一场发生在温尼伯与德黑兰之间的超现实主义梦境，探讨了身份在地理与语言错位中的荒诞性。
+                </div>
+                <div class="critical-writing">
+                    本片通过对“通用语言”的讽刺性呈现，完美契合了 Carey 对“作为文化的传播”的讨论。它揭示了在多元文化政策掩盖下的语言隔离。当新移民努力融入所谓的“官方语言”时，本片提供了一个反思窗口：这种融入是否是以抹除个人历史为代价的？
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2026 YANJUN SHEN | MRE RESEARCH PROJECT | CURATING THE NATION
+    </footer>
 
 </body>
 </html>
