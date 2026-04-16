@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未竟的叙事 | Unfinished Imaginations</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #080808; color: #d1d1d1; font-family: 'Georgia', serif; line-height: 1.8; }
+        
+        header { padding: 30px 10%; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; }
+        .back-link { color: #c5a059; text-decoration: none; font-size: 14px; }
+
+        .unit-header { padding: 60px 10%; background: #0c0c0c; border-bottom: 1px solid #1a1a1a; }
+        .unit-label { color: #c5a059; font-size: 12px; letter-spacing: 4px; display: block; margin-bottom: 15px; }
+        h1 { color: #fff; font-size: 42px; margin-bottom: 20px; font-weight: normal; }
+        .unit-intro { max-width: 800px; color: #888; font-size: 16px; }
+
+        /* 影片展示区 */
+        .films-container { padding: 80px 10%; }
+        .film-item { display: grid; grid-template-columns: 350px 1fr; gap: 60px; margin-bottom: 120px; }
+        @media (max-width: 900px) { .film-item { grid-template-columns: 1fr; } }
+
+        .film-poster { width: 100%; height: 500px; background-size: cover; background-position: center; border: 1px solid #222; }
+        
+        .film-content h2 { color: #fff; font-size: 32px; margin-bottom: 20px; border-bottom: 1px solid #c5a059; display: inline-block; padding-bottom: 5px; }
+        
+        .synopsis-box { margin-bottom: 30px; }
+        .synopsis-box h3 { color: #555; font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; }
+        .synopsis-text { font-size: 15px; color: #999; }
+
+        /* 策展人笔记样式 */
+        .curator-note { background: #111; padding: 30px; border-left: 2px solid #c5a059; position: relative; }
+        .curator-note h3 { color: #c5a059; font-size: 12px; letter-spacing: 2px; margin-bottom: 15px; }
+        .note-text { font-size: 15px; color: #b0b0b0; font-style: italic; }
+
+        .watch-btn { display: inline-block; margin-top: 30px; padding: 12px 30px; background: #c5a059; color: #000; text-decoration: none; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .watch-btn:hover { background: #fff; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html" class="back-link">← 返回放映厅</a>
+        <div style="color:#c5a059; font-weight:bold; letter-spacing:2px;">UNIT 01</div>
+    </header>
+
+    <section class="unit-header">
+        <span class="unit-label">PROGRAM UNIT</span>
+        <h1>土地与抵抗</h1>
+        <div class="unit-intro">本单元探讨定居者殖民主义（Settler Colonialism）下的土地争议，通过第一视角记录原住民对主权的坚持。</div>
+    </section>
+
+    <main class="films-container">
+        <div class="film-item">
+            <div class="film-poster" style="background-image: url('https://images.unsplash.com/photo-1505672678657-cc7037095e60?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="film-content">
+                <h2>Kanehsatake: 270 Years of Resistance</h2>
+                
+                <div class="synopsis-box">
+                    <h3>SYNOPSIS / 影片简介</h3>
+                    <p class="synopsis-text">这部由 Alanis Obomsawin 执导的里程碑式纪录片，深入记录了 1990 年奥卡冲突中莫霍克人民为保护神圣土地而进行的抵抗。影片不仅记录了军事对抗的紧张瞬间，更追溯了长达两个世纪的历史积怨，展现了尊严、身份与土地主权之间不可分割的联系。（约100字）</p>
+                </div>
+
+                <div class="curator-note">
+                    <h3>CURATOR'S NOTE / 策展笔记</h3>
+                    <p class="note-text">
+                        作为策展人，我认为此片的震撼力不仅在于其纪实性，更在于它如何重新定义了“观看”的权力。对于初到加拿大的新移民来说，官方叙事往往强调多元文化的和谐，而本片则强制我们直面这个国家地基下的张力。这里的文字是占位符，旨在展示策展人如何通过学术视角引导观众：我们需要思考，当我们在谈论身份时，是否已经预设了对他者土地的占有？这种批判性的观影过程，正是本单元想要传达的核心价值。这段文字大约有两百字左右，用来平衡影片的感官冲击与理性思考之间的关系。（约200字）
+                    </p>
+                </div>
+
+                <a href="https://www.nfb.ca/film/kanehsatake_270_years_of_resistance/" target="_blank" class="watch-btn">立即观看 (NFB.ca)</a>
+            </div>
+        </div>
+
+        <div class="film-item">
+            <div class="film-poster" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800');"></div>
+            <div class="film-content">
+                <h2>You Are on Indian Land</h2>
+                
+                <div class="synopsis-box">
+                    <h3>SYNOPSIS / 影片简介</h3>
+                    <p class="synopsis-text">1969年的经典短片，记录了发生在安大略省考尔纳瓦加保留地的封锁抗议。影片直接展示了抗议者与警方之间的法律与道德交锋。这是一部关于权利觉醒的早期影像记录，简洁有力地传达了“土地”在身份构建中的核心地位。</p>
+                </div>
+
+                <div class="curator-note">
+                    <h3>CURATOR'S NOTE / 策展笔记</h3>
+                    <p class="note-text">
+                        本片的标题本身就是一个强大的政治宣言。在策展过程中，我选择这部影片是希望观众能够思考：当“法律”与“正义”发生冲突时，影像该站在哪一边？对于新移民来说，理解“Indian Land”这一概念是解构加拿大身份政治的第一步。这段占位文字旨在模拟一种学术性的引导，探讨影像作为社会干预工具的可能性。通过将这部早期的黑白纪录片与现代叙事对比，我们可以清晰地看到权力的运作逻辑是如何通过空间隔离实现的。这里的策展分析将帮助观众从情感共鸣转向深度的社会学思考。
+                    </p>
+                </div>
+
+                <a href="https://www.nfb.ca/film/you_are_on_indian_land/" target="_blank" class="watch-btn">立即观看 (NFB.ca)</a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 60px 10%; border-top: 1px solid #222; text-align: center; color: #444; font-size: 12px;">
+        UNFINISHED IMAGINATIONS | MRE CURATORIAL PROJECT 2026
+    </footer>
+</body>
+</html>
