@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放映厅 | Unfinished Imaginations</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #080808; color: #d1d1d1; font-family: 'Georgia', serif; line-height: 1.8; }
+        
+        header { padding: 30px 10%; border-bottom: 1px solid #222; }
+        .logo { color: #c5a059; font-size: 18px; letter-spacing: 3px; text-decoration: none; }
+
+        /* 策展声明部分 */
+        .statement-section { padding: 80px 10%; border-bottom: 1px solid #1a1a1a; }
+        .label { color: #c5a059; font-size: 12px; letter-spacing: 4px; display: block; margin-bottom: 20px; }
+        h2 { color: #fff; font-size: 36px; margin-bottom: 30px; font-weight: normal; }
+        .statement-content { max-width: 800px; color: #999; font-size: 18px; font-style: italic; }
+
+        /* 四个单元的网格 */
+        .units-container { padding: 80px 10%; }
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2x2 布局 */
+            gap: 40px;
+        }
+        @media (max-width: 800px) { .units-grid { grid-template-columns: 1fr; } }
+
+        .unit-card {
+            background: #111;
+            border: 1px solid #222;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.4s;
+        }
+        .unit-card:hover { border-color: #c5a059; transform: translateY(-5px); }
+        .unit-img { width: 100%; height: 250px; background-size: cover; background-position: center; }
+        .unit-info { padding: 30px; }
+        .unit-title { color: #fff; font-size: 22px; margin-bottom: 15px; }
+        .unit-desc { color: #666; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">UNFINISHED IMAGINATIONS</a>
+    </header>
+
+    <section class="statement-section">
+        <span class="label">CURATORIAL STATEMENT</span>
+        <h2>策展前言</h2>
+        <div class="statement-content">
+            本策展项目通过电影媒介，向新移民介绍官方叙事之外的加拿大。我们将加拿大视为一种政治与历史的塑造过程，而非仅仅是定居之地...
+        </div>
+    </section>
+
+    <main class="units-container">
+        <span class="label">PROGRAM UNITS</span>
+        <div class="units-grid">
+            <a href="#" class="unit-card">
+                <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1599394022918-6c276a502221?q=80&w=800');"></div>
+                <div class="unit-info">
+                    <h3 class="unit-title">土地与抵抗</h3>
+                    <p class="unit-desc">通过 NFB 经典视角，审视土地主权与长达 270 年的抵抗历史。</p>
+                </div>
+            </a>
+            <a href="#" class="unit-card">
+                <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800');"></div>
+                <div class="unit-info">
+                    <h3 class="unit-title">语言的错位</h3>
+                    <p class="unit-desc">探讨在多元文化政策之下，那些被遮蔽或被误读的“通用语言”。</p>
+                </div>
+            </a>
+            <a href="#" class="unit-card">
+                <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1512425297275-3601272ed434?q=80&w=800');"></div>
+                <div class="unit-info">
+                    <h3 class="unit-title">身份的阈限</h3>
+                    <p class="unit-desc">关于新移民在不同地理空间中的心理重构过程。</p>
+                </div>
+            </a>
+            <a href="#" class="unit-card">
+                <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800');"></div>
+                <div class="unit-info">
+                    <h3 class="unit-title">未竟的叙事</h3>
+                    <p class="unit-desc">总结与展望：电影作为挑战国家叙事的持续工具。</p>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
