@@ -26,13 +26,14 @@
         }
         @media (max-width: 800px) { .units-grid { grid-template-columns: 1fr; } }
 
-        .unit-card {
-            background: #111;
-            border: 1px solid #222;
-            text-decoration: none;
-            color: inherit;
-            transition: 0.4s;
-        }
+        .unit-img { 
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-color: #111;
+}
         .unit-card:hover { border-color: #c5a059; transform: translateY(-5px); }
         .unit-img { width: 100%; height: 250px; background-size: cover; background-position: center; }
         .unit-info { padding: 30px; }
