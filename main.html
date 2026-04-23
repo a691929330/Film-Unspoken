@@ -215,5 +215,30 @@
 
         </div>
     </main>
+<hr style="border: 0; border-top: 1px solid #222; margin: 0 10%;">
+
+    <section id="guestbook" class="statement-section" style="background-color: #080808;">
+        <span class="label">GUESTBOOK</span>
+        <h2 class="section-title">Leave a Suggestion</h2>
+        
+        <div class="italic-text" style="max-width: 600px;">
+            <p style="margin-bottom: 30px; font-size: 16px;">
+                Your feedback helps me refine this project. Feel free to leave your thoughts anonymously.
+            </p>
+            
+            <form action="https://formspree.io/f/mjgjplzv" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                <input type="text" name="name" placeholder="Name (Optional)" 
+                       style="background: transparent; border: none; border-bottom: 1px solid #333; color: #ddd; padding: 10px 0; font-family: 'Georgia', serif; outline: none; font-size: 16px;">
+                
+                <textarea name="message" placeholder="Your suggestion..." required 
+                          style="background: transparent; border: none; border-bottom: 1px solid #333; color: #ddd; padding: 10px 0; font-family: 'Georgia', serif; min-height: 120px; outline: none; font-size: 16px; resize: vertical;"></textarea>
+                
+                <button type="submit" 
+                        style="background: transparent; border: 1px solid #c5a059; color: #c5a059; padding: 12px 35px; width: fit-content; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; font-family: 'Georgia', serif; margin-top: 10px;">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
