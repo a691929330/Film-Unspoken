@@ -30,10 +30,26 @@
         .synopsis-box h3 { color: #555; font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; }
         .synopsis-text { font-size: 15px; color: #999; }
 
-        /* 策展人笔记样式 */
-        .curator-note { background: #111; padding: 30px; border-left: 2px solid #c5a059; position: relative; }
-        .curator-note h3 { color: #c5a059; font-size: 12px; letter-spacing: 2px; margin-bottom: 15px; }
-        .note-text { font-size: 15px; color: #b0b0b0; font-style: italic; }
+        /* 策展人笔记样式 - 已更新为 Libre Franklin 字体 */
+        .curator-note { 
+            background: #111; 
+            padding: 30px; 
+            border-left: 2px solid #c5a059; 
+            position: relative; 
+        }
+        .curator-note h3 { 
+            color: #c5a059; 
+            font-size: 12px; 
+            letter-spacing: 2px; 
+            margin-bottom: 15px; 
+        }
+        .note-text { 
+            font-family: 'Libre Franklin', sans-serif; /* 使用新字体 */
+            font-size: 15px; 
+            color: #b0b0b0; 
+            font-style: normal;  /* 去掉斜体，这种字体正体更现代 */
+            line-height: 1.6; 
+        }
 
         .watch-btn { display: inline-block; margin-top: 30px; padding: 12px 30px; background: #c5a059; color: #000; text-decoration: none; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .watch-btn:hover { background: #fff; }
