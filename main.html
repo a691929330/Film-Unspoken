@@ -8,8 +8,48 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #080808; color: #d1d1d1; font-family: 'Georgia', serif; line-height: 1.8; }
         
-        header { padding: 30px 10%; border-bottom: 1px solid #222; }
-        .logo { color: #c5a059; font-size: 18px; letter-spacing: 3px; text-decoration: none; }
+        header { 
+            padding: 30px 10%; 
+            border-bottom: 1px solid #222; 
+            /* 下面这两行是魔法，让标题在左，菜单在右 */
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .logo { 
+            color: #c5a059; 
+            font-size: 18px; 
+            letter-spacing: 3px; 
+            text-decoration: none; 
+        }
+
+        /* 这是给新加的留言板、Podcast 链接设计的样式 */
+        .nav-links { 
+            display: flex; 
+            gap: 30px; 
+        }
+
+        .nav-item {
+            color: #888; 
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            font-family: 'Georgia', serif;
+        }
+
+        /* 鼠标指上去变金色 */
+        .nav-item:hover {
+            color: #c5a059; 
+        }
+
+        /* 还没做好的栏目淡淡的 */
+        .nav-item.coming-soon {
+            opacity: 0.3;
+            cursor: default;
+        }
 
         /* 统一标题样式 */
         .section-title { 
