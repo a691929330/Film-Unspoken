@@ -11,7 +11,6 @@
         header { 
             padding: 30px 10%; 
             border-bottom: 1px solid #222; 
-            /* 下面这两行是魔法，让标题在左，菜单在右 */
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -24,7 +23,6 @@
             text-decoration: none; 
         }
 
-        /* 这是给新加的留言板、Podcast 链接设计的样式 */
         .nav-links { 
             display: flex; 
             gap: 30px; 
@@ -40,28 +38,34 @@
             font-family: 'Georgia', serif;
         }
 
-        /* 鼠标指上去变金色 */
         .nav-item:hover {
             color: #c5a059; 
         }
 
-        /* 还没做好的栏目淡淡的 */
         .nav-item.coming-soon {
             opacity: 0.3;
             cursor: default;
         }
 
-        /* 统一标题样式 */
+        /* 统一大标题样式 */
         .section-title { 
             font-size: 36px; 
             color: #c5a059; 
             letter-spacing: 2px; 
             font-weight: normal;
             margin-bottom: 25px;
-            text-transform: uppercase; /* 确保是大写风格 */
+            text-transform: uppercase;
         }
 
-        /* 统一正文样式：Georgia + 斜体 */
+        /* 策展人名字专用样式：比大标题小，比正文大 */
+        .curator-name {
+            font-size: 28px; 
+            color: #fff; /* 名字用白色，增加层次感 */
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
         .italic-text {
             font-family: 'Georgia', serif;
             font-style: italic;
@@ -70,11 +74,9 @@
             font-size: 18px;
         }
 
-        /* 策展声明部分 */
         .statement-section { padding: 80px 10%; border-bottom: 1px solid #1a1a1a; }
         .label { color: #c5a059; font-size: 12px; letter-spacing: 4px; display: block; margin-bottom: 20px; }
 
-        /* 四个单元的网格 */
         .units-container { padding: 80px 10%; }
         .units-grid {
             display: grid;
@@ -105,7 +107,6 @@
         .unit-info { padding: 25px; text-align: center; }
         .unit-title { color: #fff; font-size: 20px; letter-spacing: 1px; }
 
-        /* 策展人介绍区布局 */
         .about-curator {
             display: grid;
             grid-template-columns: 250px 1fr;
@@ -132,22 +133,21 @@
 </head>
 <body>
     <header>
-    <a href="index.html" class="logo">UNFINISHED IMAGINATIONS</a>
-    
-    <nav class="nav-links">
-        <a href="#guestbook" class="nav-item">Guestbook</a>
-        <span class="nav-item coming-soon">My Podcast</span>
-        <span class="nav-item coming-soon">Events</span>
-    </nav>
-</header>
+        <a href="index.html" class="logo">UNFINISHED IMAGINATIONS</a>
+        <nav class="nav-links">
+            <a href="#guestbook" class="nav-item">Guestbook</a>
+            <span class="nav-item coming-soon">My Podcast</span>
+            <span class="nav-item coming-soon">Events</span>
+        </nav>
+    </header>
 
     <section class="statement-section" style="padding-bottom: 40px; border-bottom: none;">
-        <span class="label">ABOUT THE CURATOR & PROJECT</span>
+        <h2 class="section-title">ABOUT THE CURATOR & PROJECT</h2>
         
         <div class="about-curator">
             <div class="curator-photo"></div>
             <div class="curator-info">
-                <h3 class="section-title">Yanjun Shen</h3>
+                <h3 class="curator-name">Yanjun Shen</h3>
                 <div class="italic-text">
                     <p style="margin-bottom: 20px;">
                         Yanjun Shen is currently a graduate student in Migration and Diaspora Studies at Carleton University. She is particularly interested in Canadian cinema and films that engage with identity, migration, and politics. She has covered the Toronto International Film Festival for several years, bringing a sustained engagement with film culture and criticism to her curatorial work.
@@ -184,55 +184,47 @@
     <main class="units-container">
         <span class="label">PROGRAM UNITS</span>
         <div class="units-grid">
-            
             <a href="unit1.html" class="unit-card">
                 <div class="unit-img" style="background-image: url('unit 1.jpg');"></div>
                 <div class="unit-info">
                     <h3 class="unit-title">Land · Law · Resistance</h3>
                 </div>
             </a>
-
             <a href="unit2.html" class="unit-card">
                 <div class="unit-img" style="background-image: url('unit 2.png');"></div>
                 <div class="unit-info">
                     <h3 class="unit-title">Border · Body · Belonging</h3>
                 </div>
             </a>
-
             <a href="unit3.html" class="unit-card">
                 <div class="unit-img" style="background-image: url('unit 3.png');"></div>
                 <div class="unit-info">
                     <h3 class="unit-title">Nation · Machine · Noise</h3>
                 </div>
             </a>
-
             <a href="unit4.html" class="unit-card">
                 <div class="unit-img" style="background-image: url('unit 4.png');"></div>
                 <div class="unit-info">
                     <h3 class="unit-title">City · Capital · Discipline</h3>
                 </div>
             </a>
-
         </div>
     </main>
-<hr style="border: 0; border-top: 1px solid #222; margin: 0 10%;">
+
+    <hr style="border: 0; border-top: 1px solid #222; margin: 0 10%;">
 
     <section id="guestbook" class="statement-section" style="background-color: #080808;">
         <span class="label">GUESTBOOK</span>
         <h2 class="section-title">Leave a Suggestion</h2>
-        
         <div class="italic-text" style="max-width: 600px;">
             <p style="margin-bottom: 30px; font-size: 16px;">
                 Your feedback helps me refine this project. Feel free to leave your thoughts anonymously.
             </p>
-            
             <form action="https://formspree.io/f/mjgjplzv" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                 <input type="text" name="name" placeholder="Name (Optional)" 
                        style="background: transparent; border: none; border-bottom: 1px solid #333; color: #ddd; padding: 10px 0; font-family: 'Georgia', serif; outline: none; font-size: 16px;">
-                
                 <textarea name="message" placeholder="Your suggestion..." required 
                           style="background: transparent; border: none; border-bottom: 1px solid #333; color: #ddd; padding: 10px 0; font-family: 'Georgia', serif; min-height: 120px; outline: none; font-size: 16px; resize: vertical;"></textarea>
-                
                 <button type="submit" 
                         style="background: transparent; border: 1px solid #c5a059; color: #c5a059; padding: 12px 35px; width: fit-content; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; font-family: 'Georgia', serif; margin-top: 10px;">
                     Send Message
