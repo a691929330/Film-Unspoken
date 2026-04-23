@@ -11,10 +11,28 @@
         header { padding: 30px 10%; border-bottom: 1px solid #222; }
         .logo { color: #c5a059; font-size: 18px; letter-spacing: 3px; text-decoration: none; }
 
+        /* 统一标题样式 */
+        .section-title { 
+            font-size: 36px; 
+            color: #c5a059; 
+            letter-spacing: 2px; 
+            font-weight: normal;
+            margin-bottom: 25px;
+            text-transform: uppercase; /* 确保是大写风格 */
+        }
+
+        /* 统一正文样式：Georgia + 斜体 */
+        .italic-text {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: #ddd;
+            line-height: 1.9;
+            font-size: 18px;
+        }
+
         /* 策展声明部分 */
         .statement-section { padding: 80px 10%; border-bottom: 1px solid #1a1a1a; }
         .label { color: #c5a059; font-size: 12px; letter-spacing: 4px; display: block; margin-bottom: 20px; }
-        h2 { color: #fff; font-size: 36px; margin-bottom: 30px; font-weight: normal; }
 
         /* 四个单元的网格 */
         .units-container { padding: 80px 10%; }
@@ -25,7 +43,6 @@
         }
         @media (max-width: 800px) { .units-grid { grid-template-columns: 1fr; } }
 
-        /* 单元卡片样式：去掉了下划线 */
         .unit-card {
             background: #111;
             border: 1px solid #222;
@@ -36,7 +53,6 @@
         }
         .unit-card:hover { border-color: #c5a059; transform: translateY(-5px); }
 
-        /* 修复图片：保持电影 16:9 比例且不被切断 */
         .unit-img { 
             width: 100%; 
             aspect-ratio: 16 / 9; 
@@ -85,8 +101,8 @@
         <div class="about-curator">
             <div class="curator-photo"></div>
             <div class="curator-info">
-                <h3 style="color: #fff; font-size: 27px; margin-bottom: 25px; letter-spacing: 2px;">Yanjun Shen</h3>
-                <div style="color: #bbb; line-height: 1.8; font-size: 17px;">
+                <h3 class="section-title">Yanjun Shen</h3>
+                <div class="italic-text">
                     <p style="margin-bottom: 20px;">
                         Yanjun Shen is currently a graduate student in Migration and Diaspora Studies at Carleton University. She is particularly interested in Canadian cinema and films that engage with identity, migration, and politics. She has covered the Toronto International Film Festival for several years, bringing a sustained engagement with film culture and criticism to her curatorial work.
                     </p>
@@ -101,9 +117,9 @@
     <hr style="border: 0; border-top: 1px solid #222; margin: 0 10%;">
     
     <section class="statement-section" style="background-color: #0a0a0a;">
-        <h2 class="label" style="font-size: 36px; color: #c5a059; letter-spacing: 2px;">CURATORIAL STATEMENT</h2>
+        <h2 class="section-title">CURATORIAL STATEMENT</h2>
         <div class="full-width-statement" style="max-width: 100%;">
-            <div style="color: #ddd; line-height: 1.9; font-size: 18px; font-style: italic; font-family: 'Georgia', serif; text-align: left;">
+            <div class="italic-text">
                 <p style="margin-bottom: 30px;">
                     As a newcomer, you may feel the same way I do. When we first arrive in Canada, the information we receive is mostly practical: visas, housing, health cards, transit, and job searching. These things matter, and they help us survive. But they do not tell us much about the country itself, its history, its contradictions, its silences.
                 </p>
